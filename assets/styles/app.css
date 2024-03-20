@@ -1,0 +1,14 @@
+body {
+    background-color: rgb(34, 119, 189);
+}
+
+.img-custom {
+    height : 600px;
+    object-fit: contain;
+}
+
+.img-custom-thumbnail {
+    width : 18rem;
+    height: 200px;
+    object-fit: cover;
+}

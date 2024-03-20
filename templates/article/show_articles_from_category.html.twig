@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+
+{% block title %}Articles de {{category.name}}{% endblock %}
+
+
+{% block body %}
+
+<h1 class="text-center my-1">categories {{category.name}}</h1>
+
+{% if article is not empty %}
+
+<div class="col-9 max-auto mb-5">
+
+
+    {% for article in article %}
+
+
+        <div class="row mb-4">
+
+        <div class="col-5 me-3">
+            <a href="#" title="voir l'article">
+
+                <img src="{{asset('uploads/' ~ article.photo)}}" alt="{{article.title}}" class="img-flui rounded shadow">
+            </a>
+
+    </div>
+
+    <div class="col-7">
+        <a href="#" class="text-decoration-none text-dark">{{article.title}}</a>
+        <p class="text-muted">{{article.subtitle}}</p>
+
+    </div>
+
+
+    </div>
+    <hr>
+{% endfor %}
+
+
+    </div>
+
+{% endif %}
+
+{% endblock %}
